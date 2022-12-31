@@ -1,11 +1,7 @@
-import { Header } from "../../components/header";
-import { Summary } from "../../components/summary";
-import { SearchForm } from "./components/searchForm";
-import {
-  PriceHighLight,
-  TransactionsContainer,
-  TransactionsTable,
-} from "./styles";
+import { Header } from '../../components/header'
+import { Summary } from '../../components/summary'
+import { SearchForm } from './components/searchForm'
+import { PriceHighLight, TransactionsContainer, TransactionsTable } from './styles'
 
 export function Transactions() {
   return (
@@ -37,5 +33,5 @@ export function Transactions() {
         </TransactionsTable>
       </TransactionsContainer>
     </div>
-  );
+  )
 }

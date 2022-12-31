@@ -1,7 +1,7 @@
-import * as Dialog from "@radix-ui/react-dialog";
-import { X } from "phosphor-react";
+import * as Dialog from '@radix-ui/react-dialog'
+import { X } from 'phosphor-react'
 
-import { CloseButton, Content, Overlay } from "./styles";
+import { CloseButton, Content, Overlay } from './styles'
 
 export function NewTransactionModal() {
   return (
@@ -23,5 +23,5 @@ export function NewTransactionModal() {
         </form>
       </Content>
     </Dialog.Portal>
-  );
+  )
 }
