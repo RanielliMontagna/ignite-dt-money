@@ -4,7 +4,13 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, ArrowCircleUp, ArrowCircleDown } from 'phosphor-react'
 
-import { CloseButton, Content, Overlay, TransactionType, TransactionTypeButton } from './styles'
+import {
+  CloseButton,
+  Content,
+  Overlay,
+  TransactionType,
+  TransactionTypeButton,
+} from './styles'
 import { useTransactions } from '../../contexts/transactionsContext'
 
 const newTransactionFormSchema = z.object({
@@ -45,14 +51,24 @@ export function NewTransactionModal() {
         </CloseButton>
 
         <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
-          <input type="text" placeholder="Descrição" required {...register('description')} />
+          <input
+            type="text"
+            placeholder="Descrição"
+            required
+            {...register('description')}
+          />
           <input
             type="number"
             placeholder="Preço"
             required
             {...register('price', { valueAsNumber: true })}
           />
-          <input type="text" placeholder="Categoria" required {...register('category')} />
+          <input
+            type="text"
+            placeholder="Categoria"
+            required
+            {...register('category')}
+          />
 
           <Controller
             name="type"

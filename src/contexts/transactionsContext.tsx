@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
 import { api } from '../lib/axios'
 
 interface Transaction {
@@ -19,7 +25,7 @@ interface TransacationContextType {
 }
 
 interface TransactionsProviderProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const TransactionsContext = createContext({} as TransacationContextType)
@@ -39,7 +45,12 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     _setTransactions(response.data)
   }
 
-  async function createTransaction({ category, description, price, type }: CreateTransactionInput) {
+  async function createTransaction({
+    category,
+    description,
+    price,
+    type,
+  }: CreateTransactionInput) {
     const response = await api.post('/transactions', {
       category,
       description,
@@ -56,7 +67,9 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   }, [])
 
   return (
-    <TransactionsContext.Provider value={{ transactions, fetchTransactions, createTransaction }}>
+    <TransactionsContext.Provider
+      value={{ transactions, fetchTransactions, createTransaction }}
+    >
       {children}
     </TransactionsContext.Provider>
   )
@@ -66,7 +79,9 @@ export function useTransactions() {
   const context = useContext(TransactionsContext)
 
   if (!context) {
-    throw new Error('useTransactions must be used within a TransactionsProvider')
+    throw new Error(
+      'useTransactions must be used within a TransactionsProvider',
+    )
   }
 
   return context

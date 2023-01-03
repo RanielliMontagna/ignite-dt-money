@@ -1,10 +1,13 @@
-import { useEffect, useState } from 'react'
 import { Header } from '../../components/header'
 import { Summary } from '../../components/summary'
 import { useTransactions } from '../../contexts/transactionsContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { SearchForm } from './components/searchForm'
-import { PriceHighLight, TransactionsContainer, TransactionsTable } from './styles'
+import {
+  PriceHighLight,
+  TransactionsContainer,
+  TransactionsTable,
+} from './styles'
 
 export function Transactions() {
   const { transactions } = useTransactions()
