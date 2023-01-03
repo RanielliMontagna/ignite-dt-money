@@ -1,20 +1,36 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "description": "Desenvolvimento de site",
-            "type": "income",
-            "category": "Venda",
-            "price": 14000,
-            "createdAt": "2023-01-01T20:19:02.810Z"
-        },
-          {
-            "id": 2,
-            "description": "Hamburger",
-            "type": "outcome",
-            "category": "Alimentação",
-            "price": 35,
-            "createdAt": "2023-01-01T20:18:02.810Z"
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2023-01-01T20:19:02.810Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburger",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 35,
+      "createdAt": "2023-01-01T20:18:02.810Z"
+    },
+    {
+      "category": "Venda",
+      "description": "Desenvolvimento de app",
+      "price": 3500,
+      "type": "income",
+      "createdAt": "2023-01-03T19:46:51.388Z",
+      "id": 3
+    },
+    {
+      "category": "Alimentação",
+      "description": "Sanduíche",
+      "price": 5,
+      "type": "outcome",
+      "createdAt": "2023-01-03T19:53:10.436Z",
+      "id": 4
+    }
+  ]
 }
